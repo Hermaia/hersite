@@ -1,10 +1,7 @@
 /// <reference path="../typings/index.d.ts" />
 
-import { globalHelp } from "./help";
-
-interface HersiteOptions {
-}
-
+import { globalHelp, buildHelp, checkHelp } from "./help";
+import { buildHersite } from "../src/build";
 
 (function() {
     "use strict";
@@ -17,23 +14,39 @@ interface HersiteOptions {
 
     switch (args[2]) {
         case "build":
+            buildHersite(function(error: any, source: string) {
+                if (error) {
+                    console.error(source);
+                    console.error(error);
+
+                    process.exitCode = 1;
+                }
+            });
             return;
         case "check":
+            console.error("this command is not implemented");
             return;
         case "help":
             if (4 <= args.length) {
                 switch (args[3]) {
                     case "build":
+                        console.log(buildHelp);
+                        process.exitCode = 0;
                         return;
+
                     case "check":
+                        console.log(checkHelp);
+                        process.exitCode = 0;
                         return;
+
                     default:
                         return;
                 }
+            } else {
+                console.log(globalHelp);
+                process.exitCode = 0;
+                return;
             }
-
-            console.log(globalHelp);
-            return;
 
         default:
             console.log(globalHelp);

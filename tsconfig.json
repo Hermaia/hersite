@@ -20,10 +20,10 @@
     },
     "files": [
         "./src/asset/copy.ts",
+        "./src/build.ts",
         "./src/helpers/file-helper.ts",
         "./src/helpers/html-helper.ts",
         "./src/helpers/path-helper.ts",
-        "./src/hersite.ts",
         "./src/md/builder.ts",
         "./src/md/renderer.ts",
         "./src/options.ts",

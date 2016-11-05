@@ -6,3 +6,15 @@ Commands:
   check         Check Hersite Pages
   help          Show Helps
 `;
+
+
+export const buildHelp: string = `
+Command:
+  hersite build
+`;
+
+
+export const checkHelp: string = `
+Command:
+  hersite check
+`;
