@@ -1,0 +1,8 @@
+{
+  "globalDependencies": {
+    "cheerio": "registry:dt/cheerio#0.17.0+20160930124405",
+    "marked": "registry:dt/marked#0.0.0+20160325085301",
+    "node": "registry:dt/node#6.0.0+20161019125345",
+    "pug": "registry:dt/pug#2.0.0-beta6+20160919072324"
+  }
+}

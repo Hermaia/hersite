@@ -1,0 +1,32 @@
+{
+  "name": "hersite",
+  "version": "0.0.1",
+  "description": "site builder for Hermaia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hermaia/hersite.git"
+  },
+  "keywords": [
+    "site"
+  ],
+  "bin": {
+    "hersite": "./bin/hersite"
+  },
+  "author": "inabe49",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hermaia/hersite/issues"
+  },
+  "homepage": "https://github.com/Hermaia/hersite#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "hogan.js": "^3.0.2",
+    "marked": "^0.3.6",
+    "pug": "^2.0.0-beta6",
+    "pygmentize-bundled": "^2.3.0"
+  }
+}
