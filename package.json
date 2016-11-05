@@ -4,7 +4,8 @@
   "description": "site builder for Hermaia",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,11 @@
   "bugs": {
     "url": "https://github.com/Hermaia/hersite/issues"
   },
+  "files": [
+    "bin/hersite",
+    "lib/**/*.js",
+    "src/**/*.js"
+  ],
   "homepage": "https://github.com/Hermaia/hersite#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -28,5 +34,11 @@
     "marked": "^0.3.6",
     "pug": "^2.0.0-beta6",
     "pygmentize-bundled": "^2.3.0"
+  },
+  "devDependencies": {
+    "espower-typescript": "^6.0.1",
+    "mocha": "^3.1.2",
+    "power-assert": "^1.4.1",
+    "sinon": "^1.17.6"
   }
 }

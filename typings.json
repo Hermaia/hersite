@@ -2,7 +2,10 @@
   "globalDependencies": {
     "cheerio": "registry:dt/cheerio#0.17.0+20160930124405",
     "marked": "registry:dt/marked#0.0.0+20160325085301",
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
     "node": "registry:dt/node#6.0.0+20161019125345",
-    "pug": "registry:dt/pug#2.0.0-beta6+20160919072324"
+    "power-assert": "registry:dt/power-assert#1.4.1+20160924120522",
+    "pug": "registry:dt/pug#2.0.0-beta6+20160919072324",
+    "sinon": "registry:dt/sinon#1.16.0+20160924120326"
   }
 }
