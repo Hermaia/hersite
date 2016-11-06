@@ -23,9 +23,15 @@ import { buildHersite } from "../src/build";
                 }
             });
             return;
+
         case "check":
             console.error("this command is not implemented");
             return;
+
+        case "clean":
+            console.error("this command is not implemented");
+            return;
+
         case "help":
             if (4 <= args.length) {
                 switch (args[3]) {

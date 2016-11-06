@@ -3,6 +3,7 @@ Usage:
   hersite <command> [options]
 Commands:
   build         Build Hersite Pages
+  clean         Clean Hersite Pages
   check         Check Hersite Pages
   help          Show Helps
 `;
