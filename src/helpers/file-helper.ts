@@ -83,3 +83,32 @@ export function getFilesWithExt(root: string, ext: string, callback: (err: NodeJ
         }
     });
 }
+
+
+export function getFilesSync(root: string): string[] {
+    const results: string[] = [];
+
+    try {
+        const files = fs.readdirSync(root);
+
+        for (let i = 0; i < files.length; i++) {
+            const fullPath = path.join(root, files[i]);
+
+            if (fs.statSync(fullPath).isDirectory()) {
+                const fss = getFilesSync(fullPath);
+
+                if (fss) {
+                    fss.forEach(function(p) {
+                        results.push(p);
+                    });
+                }
+            } else {
+                results.push(fullPath);
+            }
+        }
+
+        return results;
+    } catch (e) {
+        return null;
+    }
+}

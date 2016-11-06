@@ -2,6 +2,8 @@
 
 import { globalHelp, buildHelp, checkHelp } from "./help";
 import { buildHersite } from "../src/build";
+import { cleanHersite } from "../src/clean";
+
 
 (function() {
     "use strict";
