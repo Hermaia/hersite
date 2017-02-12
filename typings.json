@@ -12,5 +12,8 @@
     "power-assert-formatter": "registry:dt/power-assert-formatter#1.4.1+20160924120522",
     "pug": "registry:dt/pug#2.0.0-beta6+20160919072324",
     "sinon": "registry:dt/sinon#1.16.0+20160924120326"
+  },
+  "dependencies": {
+    "node-emoji": "registry:dt/node-emoji#1.4.0+20170105191157"
   }
 }

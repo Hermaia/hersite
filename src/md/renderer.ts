@@ -5,6 +5,7 @@ import * as marked from "marked";
 import * as pygmentize from "pygmentize-bundled";
 
 import { toDistUrl } from "../helpers/path-helper";
+import { emojify } from "../helpers/emoji-helper";
 
 
 class CustomRenderer extends marked.Renderer {
@@ -28,9 +29,10 @@ class CustomRenderer extends marked.Renderer {
 
 
     public heading(text: string, level: number) {
+        console.error(text);
         switch (level) {
             case 1:
-                return "<h1 class=\"page-header\">" + text + "</h1>";
+                return "<h1 class=\"page-header\">" + emojify(text) + "</h1>";
             case 2:
                 return "<h2 class=\"page-header\">" + text + "</h2>";
             case 3:
@@ -66,6 +68,13 @@ class CustomRenderer extends marked.Renderer {
         }
         out += (<any>this).options.xhtml ? "/>" : ">";
         return out;
+    }
+
+
+    public text(text: string): string {
+        console.error("text");
+//        console.error(text);
+        return super.text(emojify(text));
     }
 }
 

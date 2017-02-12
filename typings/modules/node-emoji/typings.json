@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/989a69ee7c89ba91f738783c66d9a1d70e8093a1/node-emoji/index.d.ts",
+    "raw": "registry:dt/node-emoji#1.4.0+20170105191157",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/989a69ee7c89ba91f738783c66d9a1d70e8093a1/node-emoji/index.d.ts"
+  }
+}
