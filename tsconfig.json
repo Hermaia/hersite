@@ -27,6 +27,7 @@
         "./src/helpers/html-helper.ts",
         "./src/helpers/path-helper.ts",
         "./src/md/builder.ts",
+        "./src/md/markdown-it.ts",
         "./src/md/renderer.ts",
         "./src/options.ts",
         "./src/pages/page.ts",

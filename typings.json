@@ -14,6 +14,8 @@
     "sinon": "registry:dt/sinon#1.16.0+20160924120326"
   },
   "dependencies": {
+    "escape-html": "registry:dt/escape-html#0.0.0+20160428043022",
+    "markdown-it": "registry:dt/markdown-it#0.0.0+20161221020919",
     "node-emoji": "registry:dt/node-emoji#1.4.0+20170105191157"
   }
 }

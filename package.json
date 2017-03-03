@@ -31,7 +31,10 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "del": "^2.2.2",
+    "escape-html": "^1.0.3",
     "hogan.js": "^3.0.2",
+    "markdown-it": "^8.3.0",
+    "markdown-it-emoji": "^1.3.0",
     "marked": "^0.3.6",
     "node-emoji": "^1.5.1",
     "pug": "^2.0.0-beta6",

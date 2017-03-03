@@ -10,4 +10,6 @@
 /// <reference path="globals/power-assert/index.d.ts" />
 /// <reference path="globals/pug/index.d.ts" />
 /// <reference path="globals/sinon/index.d.ts" />
+/// <reference path="modules/escape-html/index.d.ts" />
+/// <reference path="modules/markdown-it/index.d.ts" />
 /// <reference path="modules/node-emoji/index.d.ts" />
