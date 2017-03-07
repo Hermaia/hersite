@@ -2,6 +2,14 @@
 Hermaia Page Builder
 
 
+## Install
+
+```
+pip install pygmets
+npm install hersite -g
+```
+
+
 ```
 typings install dt~markdown-it --save
 ```

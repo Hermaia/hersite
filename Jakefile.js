@@ -16,10 +16,3 @@ task("clean", function() {
     jake.rmRf(path);
   });
 });
-
-
-desc("sample");
-task("sample", function() {
-    jake.exec("tsc");
-    jake.exec("cd sample && node ../bin/hersite build");
-});

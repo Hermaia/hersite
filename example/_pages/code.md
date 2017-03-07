@@ -1,12 +1,12 @@
 ```json
 {
-    "title": "Hersite",
+    "title": "Hersite Sample Code",
     "useMathjax": true,
     "isDraft": true
 }
 ```
 ================================================================================
-# Pre
+# Hersite Sample Code
 
 ## C#
 
@@ -31,31 +31,6 @@ namespace Hermaia
 ```
 
 
-# Heading 1
+## YouTube
 
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-
-# Table
-
-| th1 | th2 | th3 |
-|:----|:----:|----:|
-| td1 | td2 | td3 |
-
-
-# Emoji :musical_note:
-
-We :heart: :art: !!
-
-| th1 | th2 |
-|:----|:----|
-| emoji 1 | We :heart: :art: !! |
-| emoji 2 | We :heart: :musical_note: !! |
+## SlideShare

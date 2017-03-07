@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}} - Hersite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://inabe49.github.io/assets/css/note.css">
+
+    {{#useMathjax}}
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ["\\(","\\)"]],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+          }
+        });
+      </script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+    {{/useMathjax}}
+
+
+    <style type="text/css">
+      html {
+        overflow-y: scroll;
+      }
+      body {
+        padding-top: 64px;
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container"><!-- .container-fluid -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://github.com/Hermaia/hersite">Hersite</a>
+        </div>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!--
+            <li><a href="https://inabe49.github.io/">inabe49</a></li>
+            <li><a href="https://inabe49.github.io/note/">inabe49's note</a></li>
+            -->
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+
+{{#isDraft}}
+<div class="alert alert-warning" role="alert">
+  <strong>注意</strong>
+  このページは下書きです。
+</div>
+{{/isDraft}}
+
+
+{{{content}}}
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

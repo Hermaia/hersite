@@ -1,11 +1,11 @@
 /// <reference path="../../typings/index.d.ts" />
 import * as path from "path";
-import * as marked from "marked";
 
 import { HersiteOptions, PageOptions, getPageOptions } from "../options";
 import { readFile, writeFile, getFilesWithExt } from "../helpers/file-helper";
 import { finalizePath } from "../helpers/path-helper";
-import { renderer } from "./renderer";
+
+import { markdown } from "./markdown-it";
 
 import { readTemplate, withTemplate } from "../pages/page";
 
@@ -13,13 +13,9 @@ import { readTemplate, withTemplate } from "../pages/page";
 function readContentFromMarkdown(md: string, callback: (error: any, content: string, options: PageOptions) => void): void {
     const parsed = getPageOptions(md);
 
-    marked(parsed.code, { renderer: renderer }, function (err, content) {
-        if (err) {
-            callback(err, null, null);
-        } else {
-            callback(null, content, parsed.options);
-        }
-    });
+    const result = markdown(parsed.code);
+
+    callback(null, result, parsed.options);
 }
 
 
