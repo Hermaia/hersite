@@ -6,6 +6,6 @@ build:
 	@tsc
 
 
-sample:
+example:
 	@tsc
 	@cd example && node ../bin/hersite build
