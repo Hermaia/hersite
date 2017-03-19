@@ -4,6 +4,7 @@ import { HersiteOptions, PageOptions } from "../options";
 import { PageBuilder } from "./pages/page";
 
 import { getFiles } from "./helpers/file";
+import { createDestPath } from "./helpers/path";
 
 export class HersiteBuilder {
     private _options: HersiteOptions;
@@ -20,11 +21,17 @@ export class HersiteBuilder {
     public build() {
         const that: HersiteBuilder = this;
 
-        getFiles(this._options.directories.pages, (err: NodeJS.ErrnoException, source: string) => {
+        getFiles(this._options.directories.pages, (err: NodeJS.ErrnoException, sourcePath: string) => {
             that._builders.forEach((builder: PageBuilder) => {
-                if (builder.useThisBuilder(source)) {
-
+                if (!builder.useThisBuilder(sourcePath)) {
+                    return;
                 }
+
+                const destPath = createDestPath(sourcePath, that._options);
+
+                builder.build(sourcePath, destPath, (error: any) => {
+
+                });
             });
         });
     }
