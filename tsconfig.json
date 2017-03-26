@@ -2,14 +2,16 @@
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
+        "moduleResolution": "node",
         "jsx": "react",
-        "removeComments": true
+        "removeComments": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ]
     },
     "filesGlob": [
         "./src/**/*.ts",
-        "!./src/**/*.d.ts",
         "./lib/**/*.ts",
-        "!./lib/**/*.d.ts",
         "!./node_modules/**/*.ts",
         "!./typings/**/*.ts"
     ],
@@ -19,18 +21,19 @@
         "convertTabsToSpaces": true
     },
     "files": [
-        "./src/asset/copy.ts",
         "./src/build.ts",
+        "./src/build/builder.ts",
+        "./src/build/helpers/file.ts",
+        "./src/build/helpers/html.ts",
+        "./src/build/helpers/md.ts",
+        "./src/build/helpers/path.ts",
+        "./src/build/helpers/template.ts",
+        "./src/build/pages/asset.ts",
+        "./src/build/pages/md.ts",
+        "./src/build/pages/page.ts",
+        "./src/build/pages/pug.ts",
         "./src/clean.ts",
-        "./src/helpers/emoji-helper.ts",
-        "./src/helpers/file-helper.ts",
-        "./src/helpers/html-helper.ts",
-        "./src/helpers/path-helper.ts",
-        "./src/md/builder.ts",
-        "./src/md/renderer.ts",
         "./src/options.ts",
-        "./src/pages/page.ts",
-        "./src/pug/builder.ts",
         "./lib/help.ts",
         "./lib/hersite.ts"
     ],

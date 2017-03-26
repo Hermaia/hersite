@@ -1,7 +1,7 @@
 desc("build");
 task("build", function() {
     jake.exec("tsc");
-    jake.exec("node hersite/hersite.js");
+    jake.exec("cd example && node ../bin/hersite build");
 });
 
 
@@ -15,11 +15,4 @@ task("clean", function() {
   list.toArray().map(function(path) {
     jake.rmRf(path);
   });
-});
-
-
-desc("sample");
-task("sample", function() {
-    jake.exec("tsc");
-    jake.exec("cd sample && node ../bin/hersite build");
 });

@@ -4,4 +4,4 @@ lib/**/*.js
 src/**/*.js
 
 
-sample/docs/**/*.html
+example/docs/**/*.html

@@ -1,7 +1,10 @@
 ########################################################
-.PHONY: sample
+.PHONY: build example
 
 
-sample:
+build:
 	@tsc
-	@cd sample && node ../bin/hersite build
+
+
+example:
+	@cd example && node ../bin/hersite build
