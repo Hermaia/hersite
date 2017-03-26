@@ -1,10 +1,13 @@
-/// <reference path="../../../typings/index.d.ts" />
 /// <reference path="../../../typings/markdown-it-emoji/markdown-it-emoji.d.ts" />
+import * as os from "os";
+import * as child_process from "child_process";
+
 import { Options } from "markdown-it";
 import * as emoji from "markdown-it-emoji";
 import * as escape from "escape-html";
-
 import * as md_it from "markdown-it";
+
+import * as iconv from "iconv-lite";
 
 const options: md_it.Options = {
     highlight: function(code: string, lang: string, callback?: Function): string {
@@ -12,14 +15,26 @@ const options: md_it.Options = {
           return escape(code);
         }
 
-        let result: string = require("child_process").spawnSync(
+        const buffer = child_process.spawnSync(
                 "pygmentize", [
                     "-l", lang,
                     "-f", "html",
                     "-O", "nowrap=1",
-                ], { input: code }
-            ).stdout.toString();
+                ], {
+                    input: code,
+                }
+            ).stdout;
+
+        if (os.type().toString().match("Windows")) {
+            return iconv.decode(buffer, "Shift_JIS").replace(/\s+$/g, "");
+        } else {
+            return buffer.toString().replace(/\s+$/g, "");
+        }
+
+        /*
+        const result = iconv.decode(buffer, "Shift_JIS");
         return result.replace(/\s+$/g, "");
+        */
     }
 };
 
@@ -40,7 +55,11 @@ md.renderer.rules["fence"] = function(tokens: md_it.Token[], index: number, opti
 
     if (langName === "math") {
         // return "\n$$\n" + md.utils.escapeHtml(token.content) + "\n$$\n";
-        return <any>("\n$$\n" + token.content + "\n$$\n");
+        return <any>("\n<div class=\"language-math\">$$\n" + token.content + "\n$$</div>\n");
+    }
+
+    if (langName === "embed") {
+        return <any>(token.content);
     }
 
     return default_fence(tokens, index, options, env, self);

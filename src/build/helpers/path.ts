@@ -1,4 +1,3 @@
-/// <reference path="../../../typings/index.d.ts" />
 import * as path from "path";
 
 import { HersiteOptions } from "../../options";
@@ -8,9 +7,9 @@ export function createDestPath(sourcePath: string, options: HersiteOptions): str
     const rel = path.relative(options.directories.pages, sourcePath);
     const dest = path.join(options.directories.dests, rel);
 
-    return sourcePath.replace(/README\.md$/i, "index.html")
-                     .replace(/\.md$/, ".html")
-                     .replace(/\.pug$/, ".html");
+    return dest.replace(/README\.md$/i, "index.html")
+                .replace(/\.md$/, ".html")
+                .replace(/\.pug$/, ".html");
 }
 
 export function createDestUrl(sourcePath: string): string {

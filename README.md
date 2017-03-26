@@ -1,37 +1,33 @@
-# hersite
-Hermaia Page Builder
+# HerSite
 
+Markdown based simple web page builder.
 
-## Install
+## Table of Contents
 
+* [Background](#background)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribute](#contribute)
+* [License](#license)
+
+## Background
+
+## Requirements
+
+## Installation
+
+You can install HerSite with npm.
+
+```text
+npm install -g hersite
 ```
-pip install pygmets
-npm install hersite -g
-```
 
+## Usage
 
-```
-typings install dt~markdown-it --save
-```
+## Contribute
 
-## typings
+## License
 
-```
-typings install dt~markdown-it --save
-typings install dt~escape-html --save
-typings install dt~node-emoji --save
-typings install dt~cheerio --save --global
-typings install dt~del --save
-typings install dt~empower --save
-typings install dt~glob --save
-typings install dt~marked --save --global
-typings install dt~mocha --save --global
-typings install dt~node --save --global
-typings install dt~power-assert --save
-typings install dt~power-assert-formatter --save --global
-typings install dt~pug --save --global
-typings install dt~sinon --save --global
-
-
-typings install dt~minimatch --save
-```
+Code copyright 2017 inabe49  
+Code released under [the MIT license](https://github.com/hermaia/hersite/blob/master/LICENSE).

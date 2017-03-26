@@ -1,5 +1,3 @@
-/// <reference path="../typings/index.d.ts" />
-
 import { globalHelp, buildHelp, checkHelp } from "./help";
 import { buildHersite } from "../src/build";
 import { cleanHersite } from "../src/clean";
@@ -17,6 +15,8 @@ import { cleanHersite } from "../src/clean";
     switch (args[2]) {
         case "build":
             buildHersite(function(error: any, source: string) {
+                console.log(source);
+
                 if (error) {
                     console.error(source);
                     console.error(error);
@@ -32,6 +32,11 @@ import { cleanHersite } from "../src/clean";
 
         case "clean":
             console.error("this command is not implemented");
+            return;
+
+        case "--version":
+            console.log(`0.0.6`);
+            process.exitCode = 0;
             return;
 
         case "help":

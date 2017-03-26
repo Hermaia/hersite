@@ -1,5 +1,4 @@
 /// <reference path="../../../typings/hogan/hogan.d.ts" />
-/// <reference path="../../../typings/index.d.ts" />
 import * as fs from "fs";
 import * as path from "path";
 import * as hogan from "hogan.js";

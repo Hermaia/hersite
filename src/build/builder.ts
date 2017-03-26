@@ -1,5 +1,3 @@
-/// <reference path="../../typings/index.d.ts" />
-
 import { HersiteOptions, PageOptions } from "../options";
 import { PageBuilder } from "./pages/page";
 
@@ -18,7 +16,7 @@ export class HersiteBuilder {
     public enumerateFiles() {
     }
 
-    public build() {
+    public build(callback: (error: any, source: string) => void) {
         const that: HersiteBuilder = this;
 
         getFiles(this._options.directories.pages, (err: NodeJS.ErrnoException, sourcePath: string) => {
@@ -30,7 +28,7 @@ export class HersiteBuilder {
                 const destPath = createDestPath(sourcePath, that._options);
 
                 builder.build(sourcePath, destPath, (error: any) => {
-
+                    callback(error, sourcePath);
                 });
             });
         });

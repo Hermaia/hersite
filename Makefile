@@ -7,5 +7,4 @@ build:
 
 
 example:
-	@tsc
 	@cd example && node ../bin/hersite build

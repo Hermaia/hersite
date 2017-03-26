@@ -1,11 +1,5 @@
-/// <reference path="../../../typings/index.d.ts" />
 import * as path from "path";
-
-
 import * as pug from "pug";
-
-
-
 import * as fs from "fs";
 
 import { HersiteOptions, PageOptions } from "../../options";

@@ -1,24 +1,23 @@
-/// <reference path="../typings/index.d.ts" />
-import * as path from "path";
-
 import { readHersiteOptions, PageOptions } from "./options";
-import { buildMarkdownPages } from "./md/builder";
-import { copyFilesWithExt } from "./asset/copy";
-import { buildPugPages } from "./pug/builder";
+
+import { HersiteBuilder } from "./build/builder";
+import { AssetBuilder } from "./build/pages/asset";
+import { MarkdownBuilder } from "./build/pages/md";
+import { PugBuilder } from "./build/pages/pug";
 
 
 export function buildHersite(callback: (error: any, source: string) => void): void {
     const options = readHersiteOptions();
 
-    buildMarkdownPages(options, function(error: any, source: string) {
-        callback(error, source);
-    });
+    const builder = new HersiteBuilder(options, [
+        new MarkdownBuilder(options),
+        new PugBuilder(options),
+        new AssetBuilder(options),
+    ]);
 
-    copyFilesWithExt(options, function(error: any, source: string) {
-        callback(error, source);
-    });
-
-    buildPugPages(options, function(error: any, source: string) {
-        callback(error, source);
+    builder.build((error: any, source: string) => {
+        if (error) {
+            callback(error, source);
+        }
     });
 }

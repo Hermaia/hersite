@@ -1,11 +1,3 @@
-```json
-{
-    "title": "Hersite",
-    "useMathjax": true,
-    "isDraft": true
-}
-```
-================================================================================
 # Hersite Sample
 
 * [Code](./code.md)
