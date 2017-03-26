@@ -9,37 +9,21 @@
             "node_modules/@types"
         ]
     },
-    "filesGlob": [
-        "./src/**/*.ts",
-        "./lib/**/*.ts",
-        "!./node_modules/**/*.ts",
-        "!./typings/**/*.ts"
-    ],
     "formatCodeOptions": {
         "indentSize": 4,
         "tabSize": 4,
         "convertTabsToSpaces": true
     },
-    "files": [
-        "./src/build.ts",
-        "./src/build/builder.ts",
-        "./src/build/helpers/file.ts",
-        "./src/build/helpers/html.ts",
-        "./src/build/helpers/md.ts",
-        "./src/build/helpers/path.ts",
-        "./src/build/helpers/template.ts",
-        "./src/build/pages/asset.ts",
-        "./src/build/pages/md.ts",
-        "./src/build/pages/page.ts",
-        "./src/build/pages/pug.ts",
-        "./src/clean.ts",
-        "./src/options.ts",
-        "./lib/help.ts",
-        "./lib/hersite.ts"
+    "include": [
+        "./src/**/*.ts",
+        "./lib/**/*.ts"
+    ],
+    "exclude": [
+      "./node_modules/**/*.ts",
+      "./typings/**/*.ts"
     ],
     "compileOnSave": true,
     "buildOnSave": true,
-    "exclude": [],
     "atom": {
         "rewriteTsconfig": true
     }
