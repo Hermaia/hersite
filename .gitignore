@@ -5,3 +5,5 @@ src/**/*.js
 
 
 example/docs/**/*.html
+
+npm-debug.log

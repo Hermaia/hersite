@@ -4,10 +4,5 @@
         "templates": "./_templates/",
         "dests": "./docs/"
     },
-    "defaultPageOption": {
-        "title": "Hersite",
-        "useMathjax": false,
-        "isDraft": true
-    },
     "assetExts": [".jpg", ".png", ".svg", ".mp3", ".jpeg"]
 }

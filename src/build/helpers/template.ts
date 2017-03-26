@@ -20,8 +20,6 @@ export class TemplateBuilder {
     public build(content: string, options: PageOptions): string {
         return this._compiled.render({
             title: options.title,
-            useMathjax: options.useMathjax,
-            isDraft: options.isDraft,
             content: content,
         });
     }
