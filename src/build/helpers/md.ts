@@ -1,13 +1,17 @@
-/// <reference path="../../../typings/markdown-it-emoji/markdown-it-emoji.d.ts" />
+/// <reference path="../../../typings/index.d.ts" />
+
 import * as os from "os";
 import * as child_process from "child_process";
 
 import { Options } from "markdown-it";
-import * as emoji from "markdown-it-emoji";
 import * as escape from "escape-html";
 import * as md_it from "markdown-it";
 
 import * as iconv from "iconv-lite";
+
+import * as md_it_icon from "markdown-it-icon";
+import * as emojione from "emojione";
+
 
 const options: md_it.Options = {
     highlight: function(code: string, lang: string, callback?: Function): string {
@@ -30,17 +34,27 @@ const options: md_it.Options = {
         } else {
             return buffer.toString().replace(/\s+$/g, "");
         }
-
-        /*
-        const result = iconv.decode(buffer, "Shift_JIS");
-        return result.replace(/\s+$/g, "");
-        */
     }
 };
 
 const md = md_it(options);
 
-md.use(emoji, [{}]);
+
+md.use(md_it_icon);
+
+md.renderer.rules["emoji"] = function(tokens, idx) {
+    var shortname = tokens[idx].markup;
+    if(shortname.startsWith('fa-')) { // fontawesome
+        return '<i class="fa ' + shortname + '"></i>';
+    }
+
+    if(shortname.startsWith('ion-')) { // ionicons
+        return '<i class="' + shortname + '"></i>';
+    }
+
+    return emojione.shortnameToImage(':' + shortname + ':'); // emojione
+};
+
 
 const default_fence = md.renderer.rules["fence"];
 

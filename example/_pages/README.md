@@ -1,19 +1,19 @@
-# Hersite Sample
+# Hersite
+
+## インストール
+
+```
+npm install -g hersite
+```
+
 
 * [Code](./code.md)
+* [バグ調査用](./bug.md)
+
+* [コードの挿入](./code.md)
+* [Icon & Emoji](./icon-emoji.md)
 
 
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
 
 
 # Table
@@ -31,3 +31,10 @@ We :heart: :art: !!
 |:----|:----|
 | emoji 1 | We :heart: :art: !! |
 | emoji 2 | We :heart: :musical_note: !! |
+
+
+## Font Awesome
+
+| code | icon |
+|:----:|:-----|
+| `:fa-linux:` | :fa-linux: |

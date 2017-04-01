@@ -1,7 +1,7 @@
 desc("build");
 task("build", function() {
     jake.exec("tsc");
-    jake.exec("cd example && node ../bin/hersite build");
+    jake.exec("node ./bin/hersite build");
 });
 
 

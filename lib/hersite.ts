@@ -2,6 +2,7 @@ import { globalHelp, buildHelp, checkHelp } from "./help";
 import { buildHersite } from "../src/build";
 import { cleanHersite } from "../src/clean";
 
+import { getVersion } from "./version";
 
 (function() {
     "use strict";
@@ -35,7 +36,7 @@ import { cleanHersite } from "../src/clean";
             return;
 
         case "--version":
-            console.log(`0.0.6`);
+            console.log(getVersion());
             process.exitCode = 0;
             return;
 

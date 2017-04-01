@@ -1,4 +1,4 @@
-# Hersite Sample Code
+# コードの挿入
 
 ## C#
 
@@ -23,11 +23,15 @@ namespace Hermaia
 
 ## MathJax
 
+$ E = mc^2 $ !!
+
 ```math
 \begin{equation*}
     E = mc^2
 \end{equation*}
 ```
+
+### 鍵括弧をちゃんと表示できるか (出来ているか？)
 
 ```math
 \begin{equation*}

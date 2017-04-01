@@ -4,6 +4,6 @@ lib/**/*.js
 src/**/*.js
 
 
-example/docs/**/*.html
+docs/**/*.html
 
 npm-debug.log

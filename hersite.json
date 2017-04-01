@@ -1,7 +1,7 @@
 {
     "directories": {
-        "pages": "./_pages/",
-        "templates": "./_templates/",
+        "pages": "./example/_pages/",
+        "templates": "./example/_templates/",
         "dests": "./docs/"
     },
     "assetExts": [".jpg", ".png", ".svg", ".mp3", ".jpeg"]

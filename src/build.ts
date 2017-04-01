@@ -4,6 +4,7 @@ import { HersiteBuilder } from "./build/builder";
 import { AssetBuilder } from "./build/pages/asset";
 import { MarkdownBuilder } from "./build/pages/md";
 import { PugBuilder } from "./build/pages/pug";
+import { HtmlBuilder } from "./build/pages/html";
 
 
 export function buildHersite(callback: (error: any, source: string) => void): void {
@@ -13,6 +14,7 @@ export function buildHersite(callback: (error: any, source: string) => void): vo
         new MarkdownBuilder(options),
         new PugBuilder(options),
         new AssetBuilder(options),
+        new HtmlBuilder(options),
     ]);
 
     builder.build((error: any, source: string) => {
