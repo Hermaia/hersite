@@ -1,10 +1,14 @@
 # Hersite
 
-## インストール
+
+## 使い方
+
+### インストール
 
 ```
 npm install -g hersite
 ```
+
 
 
 * [Code](./code.md)

@@ -1,6 +1,6 @@
 {
   "name": "hersite",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Markdown based simple web page builder",
   "main": "index.js",
   "scripts": {
